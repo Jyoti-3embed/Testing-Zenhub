@@ -1,0 +1,518 @@
+<!DOCTYPE html> <!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]--> <!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]--> <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]--> <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head >
+    <link rel="stylesheet" type="text/css" href="custom/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="wp-content/cache/minify/e545b.css" media="all" />
+    <link rel="stylesheet" href="css/style.css"> <!-- Gem style -->
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/main.js"></script> <!-- Gem jQuery -->
+    
+    <style type="text/css">
+
+    #mobileViewDropdown{
+        visibility: hidden;
+    }
+
+    #mavbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+   /* overflow: hidden;*/
+    }
+
+    #mavbar li:not(:first-child) {
+        margin-top:13px;
+    }
+
+    #mavbar li {
+        float: right;
+    }
+
+    #mavbar li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    #mavbar li a:hover {
+        background-color: #3d5b99;
+        color: black;
+        border: none;
+    }
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*    overflow: hidden;
+    */    background-color: blue;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover, .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+    li .dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #3d5b99;
+        opacity: 0.8;
+        min-width: 160px;
+    /*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    */    z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black !important;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        border-radius: 0% !important;
+        background-color: white !important;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: green !important;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    @media only screen and (max-width: 698px) {
+        #crypNews {
+           display:none; 
+        }
+        #mobileViewDropdown{
+        visibility: visible;
+        }
+
+        #mobileViewDropdown .dropdown-content a{
+        font-size: 10px !important; 
+        text-align: left !important;
+        }
+    }
+
+    .fa-sign-in:hover {
+        color: white;
+    }
+
+    .fa-sign-out:hover {
+        color: white;
+    }
+
+    .panel-title a {
+        color: white;        
+    }
+
+    .panel-title {
+        text-align: center;
+    }
+
+    .panel-heading {
+        background-color:  #3d5b99 !important;
+    }
+
+    .connect {
+        background: none;
+    }
+
+    .connect li a {
+        padding-top: 0px;
+    }
+
+    #homerowgradient {
+        margin-top: 10px;
+    }
+
+    .panel-body {
+        background-color: #dddddd;
+    }
+
+    @font-face{font-family:'Century Gothic';src:url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Italic.eot');src:local('Century Gothic Italic'), local('CenturyGothic-Italic'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Italic.eot?#iefix') format('embedded-opentype'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Italic.woff2') format('woff2'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Italic.woff') format('woff'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Italic.ttf') format('truetype');font-weight:normal;font-style:italic}@font-face{font-family:'Century Gothic';src:url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-BoldItalic.eot');src:local('Century Gothic Bold Italic'), local('CenturyGothic-BoldItalic'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-BoldItalic.eot?#iefix') format('embedded-opentype'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-BoldItalic.woff2') format('woff2'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-BoldItalic.woff') format('woff'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-BoldItalic.ttf') format('truetype');font-weight:bold;font-style:italic}@font-face{font-family:'Century Gothic';src:url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic.eot');src:local('Century Gothic'), local('CenturyGothic'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic.eot?#iefix') format('embedded-opentype'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic.woff2') format('woff2'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic.woff') format('woff'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic.ttf') format('truetype');font-weight:normal;font-style:normal}@font-face{font-family:'Century Gothic';src:url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Bold.eot');src:local('Century Gothic Bold'), local('CenturyGothic-Bold'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Bold.eot?#iefix') format('embedded-opentype'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Bold.woff2') format('woff2'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Bold.woff') format('woff'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-CenturyGothic-Bold.ttf') format('truetype');font-weight:bold;font-style:normal}@font-face{font-family:'Bebas Neue';src:local('Bebas Neue'), local('Bebas Neue Bold'), local('BebasNeue-Bold'),local('BebasNeueBold'), url('https://d32zgchuaceooa.cloudfront.net/fonts/bebasneue_bold-webfont.woff2') format('woff2'), url('https://d32zgchuaceooa.cloudfront.net/fonts/bebasneue_bold-webfont.woff') format('woff');font-weight:bold;font-style:normal}@font-face{font-family:'Merriweather';src:url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-Merriweather-Bold.eot');src:local('Merriweather'), local('Merriweather Bold'), local('Merriweather-Bold'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-Merriweather-Bold.eot?#iefix') format('embedded-opentype'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-Merriweather-Bold.woff2') format('woff2'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-Merriweather-Bold.woff') format('woff'), url('https://d32zgchuaceooa.cloudfront.net/fonts/subset-Merriweather-Bold.ttf') format('truetype');font-weight:bold;font-style:normal}
+    </style>
+
+    <meta charset="UTF-8"/>
+    <link rel="shortcut icon" href="custom/favicon.ico"/>
+    <title> Manik Abbi</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <link rel="manifest" href="manifest.json"/>
+    <title>Manik Abbi</title>
+    <script defer type="text/javascript" src="wp-content/cache/minify/df983.js">
+        
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":""},"headline":"Manik Abbi","image":{"@type":"ImageObject","url":"","width":"auto","height":"auto"},"datePublished":"2016-01-04T20:13:07-0600","dateModified":"2017-02-24T12:41:42+0000","author":{"@type":"Person","name":"Manik Abbi"},"publisher":{"@type":"Organization","name":"","logo":{"@type":"ImageObject","url":"custom/logo.jpg","width":"auto","height":"auto"}},"description":""}
+    </script> 
+
+    <style type="text/css">.ssba{padding:0px}.ssba img{width:25px !important;padding:0px;border:0;box-shadow:none !important;display:inline !important;vertical-align:middle}.ssba, .ssba a{text-decoration:none;border:0;background:none;font-size:18px;font-weight:normal}.ssba{padding:15px 0px}.ssba div{font-size:0.8em;font-weight:bold;line-height:1em}.ssba img{padding:0px 0px 0px 0px}.ssba a{padding:0 1em;display:inline-block}.ssba a.ssba_twitter_share{background:#39a9e0}.ssba a.ssba_google_share{background:#dc4e41}.ssba a.ssba_linkedin_share{background:#007fb1}.ssba a.ssba_facebook_share{background:#3b5998}
+    </style>
+
+    <noscript><style type="text/css">.wpb_animate_when_almost_visible{opacity:1}</style></noscript>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:type" content="website"/> 
+    </head>
+
+<body id="backtotop" class="home page-template page-template-page-home page-template-page-home-php page page-id-5 wpb-js-composer js-comp-ver-4.12 vc_responsive"> 
+<div id="popupWrapper">
+<div id="fade" class="black_overlay"></div><noindex>
+<div id="offer1" class="white_content3">
+<div id="newsletter">
+    <div class="white-border">
+        <div class="newsletter-wrap">
+            <h4>Newsletter</h4>
+            <p>Stay up to date with all our web activities</p>
+    <form style="margin:0" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" novalidate="">
+        <input type="email" required="" placeholder="Add your email" id="mce-EMAIL" class="email" name="EMAIL" value="">
+        <input type="button" style="font-size:13px;" class="btn btn-info" id="subscribe-popup" name="subscribe" value="Subscribe">
+    </form>     
+        </div>
+    </div>
+</div>
+    
+</div>
+<div id="offer1_fade" class="grey_content3"></div></div>
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+        <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+            <ul class="cd-switcher">
+                <li><a href="#0">Sign in</a></li>
+                <li><a href="#0">New account</a></li>
+            </ul>
+
+            <div id="cd-login"> <!-- log in form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signin-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signin-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signin-password" type="text"  placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width" type="submit" value="Login">
+                    </p>
+                </form>
+                
+                <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-login -->
+
+            <div id="cd-signup"> <!-- sign up form -->
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-username" for="signup-username">Username</label>
+                        <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Username">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="signup-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <label class="image-replace cd-password" for="signup-password">Password</label>
+                        <input class="full-width has-padding has-border" id="signup-password" type="text"  placeholder="Password">
+                        <a href="#0" class="hide-password">Hide</a>
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input type="checkbox" id="accept-terms">
+                        <label for="accept-terms">I agree to the <a href="#0">Terms</a></label>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Create account">
+                    </p>
+                </form>
+
+                <!-- <a href="#0" class="cd-close-form">Close</a> -->
+            </div> <!-- cd-signup -->
+
+            <div id="cd-reset-password"> <!-- reset password form -->
+                <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+                <form class="cd-form">
+                    <p class="fieldset">
+                        <label class="image-replace cd-email" for="reset-email">E-mail</label>
+                        <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+                        <span class="cd-error-message">Error message here!</span>
+                    </p>
+
+                    <p class="fieldset">
+                        <input class="full-width has-padding" type="submit" value="Reset password">
+                    </p>
+                </form>
+
+                <p class="cd-form-bottom-message"><a href="#0">Back to log-in</a></p>
+            </div> <!-- cd-reset-password -->
+            <a href="#0" class="cd-close-form">Close</a>
+        </div> <!-- cd-user-modal-container -->
+    </div> <!-- cd-user-modal -->
+
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-KKSKW4" height="0" width="0" class="sr-only"></iframe></noscript> 
+<header style="width: 100%;position: fixed;z-index: 111;padding-bottom: 0px" id="masthead" class="site-header" role="banner">
+    <div class="container">
+        <div class="row">
+        <div class="col-md-12" id="mavbar">
+        <div class="row">
+            <ul>
+            <li class="col-md-2" style="float:left"><a href="index.html"><img style="height: 50px;width: 50px;border-radius: 20%" src="custom/logo.jpg" alt="Manik logo"/></a></li>
+            
+            <li id="crypNews"><a class="cd-signup col-md-1.5" href="#">Sign up</a></li>
+            <li id="crypNews"><a class="cd-signin col-md-1.5" href="#">Sign in</a></li>
+            
+            <li id="crypNews" class="dropdown col-md-1.5">
+                <a href="javascript:void(0)" class="">Crypto News</a>
+                <div class="dropdown-content">
+                    <a target="_blank" href="https://www.cryptocoinsnews.com/">Crypto Coin</a>
+                    <a target="_blank" href="https://cointelegraph.com/">Coin Telegraph</a>
+                    <a target="_blank" href="https://247cryptonews.com/">247 Crypto News</a>
+                    <a target="_blank" href="https://news.bitcoin.com/">Bit Coin</a>
+                </div>
+            </li> 
+            <li id="crypNews" class="dropdown col-md-1.5">
+                <a href="javascript:void(0)" class="">Merchants/Markets</a>
+                <div class="dropdown-content">
+                    <a target="_blank" style="text-align:center;" href="coinmarketcap.com">Coin Market Cap</a>
+                    <a target="_blank" style="text-align:center;" href="https://99bitcoins.comwho-accepts-bitcoins-payment-companies-stores-take-bitcoins/">Bit Coins</a>
+                </div>
+            </li> 
+            <li id="crypNews" class="dropdown col-md-1.5">
+                <a href="javascript:void(0)" class="">Trading Platforms</a>
+                <div class="dropdown-content">
+                   <a target="_blank" style="text-align:center;" href="https://coinmarketcap.com/exchanges/bter/">Blue Trade</a>
+                   <a target="_blank" style="text-align:center;" href="https://coinmarketcap.com/exchanges/livecoin/">Live Coin</a>
+                   <a target="_blank" style="text-align:center;" href="https://coinmarketcap.com/exchanges/bittylicious/">Bittylicious</a>
+                </div>
+            </li>
+            <li id="mobileViewDropdown" class="dropdown col-md-1">
+            <i title="sign in" class="fa fa-sign-in" aria-hidden="true"></i>
+            </li>
+
+            <li id="mobileViewDropdown" class="dropdown col-md-1">
+            <i title="sign out" class="fa fa-sign-out" aria-hidden="true"></i>
+            </li>
+            <li id="mobileViewDropdown" class="dropdown col-md-1">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+                   <div class="dropdown-content">
+                   <a href="javascript:void(0)" class="">Crypto News</a>
+                   <a href="javascript:void(0)" class="">Merchants/Markets</a>
+                   <a href="javascript:void(0)" class="">Trading Platforms</a>
+                </div>
+            </li>            
+            </ul>
+            </div>
+        </div>
+        </div>
+    <!--<div class="col-xs-12 col-md-10 text-right" style="padding-left: 0;">
+        <div class="col-xs-9 col-sm-5 logo text-left" style="padding-left: 0;"> 
+            <a href="index.html"><img style="height: 50px;width: 50px;border-radius: 20%" src="custom/logo.jpg" alt="Manik logo"/></a>
+        </div>
+        <nav id="nav" role="navigation" class="site-navigation secondary-navigation col-xs-12 col-sm-7 text-right hidden-xs"> </nav> 
+        <nav role="navigation" class="site-navigation mobile-navigation text-right hidden-md hidden-lg"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button></nav>
+    </div>
+    <div class="col-xs-8 col-sm-2 text-right"><ul id="headerSocial"></ul></div>-->
+    <div class="col-xs-12 col-md-7 text-right col-md-push-6 mainNav"> <nav role="navigation" class="site-navigation main-navigation text-right hidden-xs" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+    <!--<ul>
+    <li itemprop="name">
+        <div class="dropdown">
+            <button onclick="Function1()" class="dropbtn">Crypto News</button>
+            <div id="Dropdown1" class="dropdown-content">
+                <a target="_blank" style="text-align:center;" href="https://www.cryptocoinsnews.com/">Crypto Coin</a>
+                <a target="_blank" style="text-align:center;" href="https://cointelegraph.com/">Coin Telegraph</a>
+                <a target="_blank" style="text-align:center;" href="https://247cryptonews.com/">247 Crypto News</a>
+                <a target="_blank" style="text-align:center;" href="https://news.bitcoin.com/">Bit Coin</a>
+            </div>
+        </div>
+    </li>
+    <li itemprop="name">
+        <div class="dropdown">
+            <button onclick="Function2()" class="dropbtn">Merchants/Markets</button>
+            <div id="Dropdown2" class="dropdown-content">
+                <a target="_blank" style="text-align:center;" href="coinmarketcap.com">Coin Market Cap</a>
+                <a target="_blank" style="text-align:center;" href="https://99bitcoins.com/who-accepts-bitcoins-payment-companies-stores-take-bitcoins/">Bit Coins</a>  
+            </div>
+        </div>
+    </li>
+    <li itemprop="name">
+        <div class="dropdown">
+            <button onclick="Function3()" class="dropbtn">Trading Platforms</button>
+            <div id="Dropdown3" class="dropdown-content">
+                <a target="_blank" style="text-align:center;" href="https://coinmarketcap.com/exchanges/bter/">Blue Trade</a>
+                <a target="_blank" style="text-align:center;" href="https://coinmarketcap.com/exchanges/livecoin/">Live Coin</a>
+                <a target="_blank" style="text-align:center;" href="https://coinmarketcap.com/exchanges/bittylicious/">Bittylicious</a>
+            </div>
+        </div>
+    </li>
+    <li>
+        <a class="btn btn-default">Sign Up</a>
+    </li>    
+        </ul> --></nav></div><div class="clearfix"></div></div> </header><div class="container-fluid"><div style="margin-top:80px;" class="desktopvideobanner"><div id="video-wrapp" class="video-wrappheader"><div class="videoheader"> <img src="../d32zgchuaceooa.cloudfront.net/wp-content/themes/ikal/images/video-screencap.jpg" alt="Decide to Go Pro" style="width:100%"/> <a id="videoSrc" style="display:none" href="https://d32zgchuaceooa.cloudfront.net/wp-content/uploads/Website-Banner-Opti2.mp4"></a></div></div></div><div class="headermobilepicture"><div class="mobilegoproimg"> <img src="custom/logo.jpg" alt="Manik Abbi"></div></div></div><div id="homerowgradient"><div class="fluid-container"><div id="primary" class="row-fluid"><div id="content" role="main" class="col-xs-12">
+        <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">About Cryptocurrency</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">95% of the people are working in cryptocurrency but they don’t even know what exactly crypto is and where does this term came from it is derived by cryptography. Its an alphanumerical Code where duplicacy is not possible. Now the question arises how? See its a paper money and this is alphanumerical code in which aphlabets and numerics both are there now check out from where this paper money was printed - from rbi go on to software enter the code and that software will tell u this paper money was printed in oct 2011 from this machine and this is 100 Rs note if the paper money is real if its not you don’t have to check and feel it its fake and is of no use now if u go digitally then duplication - NOT Possible 
+If you like my video please like it share it and comment on it in my next video. I will tell you what is bitcoin and what mining is ? for more info Please visit www.cryptoadvice.com or cryptogram.com… till then keep listening, keep growing and keep enjoying Thankyou so much and have a great day ahead ….!</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">About Bitcoin</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body"> Bitcoin is a decentralised digital currency it is also called cryptocurrency and now became the most expensive currency of the world and people also call it Digital gold because its has same qualities as Gold like its inflation proof its limited comes from mining its supply is limited and having a interim value and if u have btc/gold that belongs to u only nobody else can claim if its in ur pocket wallet or locker.What is mining - its a process of solving a mathematical equation where a machine do the same thing and validate that its a genuine cryptography or not asa it validates the amount gets transfer to another account and the miner get btc as an reward - making understand with help of board.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Is this the right time getting involved in this industry</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Yes, it is going world wide and accepting digitalisation. Only 5% of the people knows about btc and then also its the most expensive currency of the world and only .5% people have knowledge that what exactly it is sou can seee your chances of winning. If u invest your time and money in technology u will grow. Technology never waits for u. You have to wait for it so grab the biggest opportunity and if u really wanna see how big industry it is check out the coinmarketcap.com the market capital of this industry crossed 17 billion $ foe more info.</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">Predictions</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Most fav topic now a days - what u predict ? how much will be the price in next 4 months 6 months 1 year 2 year or so on.See here is the answer and make sure don’t ask me this question again and again “the market is derived by demand and supply if the supply is less or limited and the demand is high the currency price will appreciate in any of the industry.</div>
+      </div>
+    </div>
+  </div> 
+
+        <div class="col-sm-12"><h1>Meet Manik</h1>
+        <p>
+            I have 5 years experience in IT field we specialised and have team of IOS and Android apps development and now working in almost from last 2 years in cryptocurrency - bitcoin and alt coins. We do mining trading exchange and affiliate marketing regardless of anything. I am still learning and have so much learnt about it as its a very huge industry of the market capital of $23 billion as dated and increasing day by day so we have change to create a new revolution in the industry of decentralisation and can create history in technology.
+        </p>
+            <div class="row more-photos">
+                <div class="col-xs-12 col-sm-5"> 
+                <figure>
+                <img class="manikpics" src="images/ManikPic1small1.jpg" alt="Manik Pic1" />
+                </figure>
+                </div>
+                <div class="col-xs-12 col-sm-7">
+                    <blockquote><p>Manik has performed superbly in the role of planning events and greeting dignitaries, accomplishing responsibilities most effectively.</p></blockquote><p class="quote-source">– Daniel</p></div></div><div class="row more-photos"><div class="col-xs-12 col-sm-5"> <figure><img src="images/ManikPic1small1.jpg" alt="Manik pic2" /></figure></div><div class="col-xs-12 col-sm-7"><blockquote><p>You are a mentor to me and I really feel lucky to have a boss like you. Thanks for being so nice and supportive to me and everyone else in the organization.</p></blockquote>
+                    <p class="quote-source">– Mark</p><div class="btn-container"><a href="speaking/index.html"></a></div>
+                </div>
+            </div>
+            <h1>Crypto Advice</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/XGSy3_Czz8k?controls=0">
+                </iframe>
+                <div style="margin:10px;">
+                    <button class="btn btn-success">Pay Now</button>
+                </div>
+            </div>            
+            <div class="col-md-6">
+                <iframe width="420" height="345" src="https://www.youtube.com/embed/XGSy3_Czz8k">
+                </iframe>
+                <div style="margin:10px;">
+                    <button class="btn btn-success">Pay Now</button>
+                </div>
+            </div>
+        </div>        
+</div></div></div></div><div class="socialBlocks"><div class="container text-center paddingTop mobile-social-space"></div></div></div></div><div id="topFooter" class="col-xs-12 grayGradient"><div class="row"></div><div class="row"><div id="footer-widgets"><div class="container"><div class="row" style="margin-top:30px;"><div class="col-xs-12 col-sm-4"><div id="recent-posts-3" class="widget widget_recent_entries"><h4>Recent Posts</h4></div></div><div class="col-xs-12 col-sm-4"><div id="simple_tweet_widget-2" class="widget simple_tweet_widget"><h4>Latest Tweets</h4><ul class="pages"></ul></div></div><div class="col-xs-12 col-sm-4 text-right"><div class="widget"><h4>Connect with Me</h4><ul class="connect"><li><a title="Connect with Manik on Facebook" href="" target="_blank"><i class="fa fa-facebook"></i></a></li><li><a title="Connect with Manik on Twitter" href="" target="_blank"><i class="fa fa-twitter"></i></a></li><li><a title="Connect with Manik on LinkedIn" href="" target="_blank"><i class="fa fa-linkedin"></i></a></li><li><a title="Connect with Manik on Google+" href="" target="_blank"><i class="fa fa-google-plus"></i></a></li><li><a title="Connect with Manik on YouTube" href="" target="_blank"><i class="fa fa-youtube"></i></a></li><li><a title="Connect with Manik on iTunes" href="" target="_blank"><i class="fa fa-headphones"></i></a></li><li><a title="Connect with Manik through his Newsletter" href="" target="_blank"><i class="fa fa-newspaper-o"></i></a></li></ul></div></div></div></div></div></div></div><footer class="site-footer col-xs-12 text-center blackGradient" role="contentinfo"><div class="site-info container"><p class="copyright">&copy; 2017 Manik company name</p></div> </footer> <script defer type="text/javascript" src="wp-content/cache/minify/38e3c.js"></script> <!-- Google Tag Manager --> <script defer type="text/javascript">/*<![CDATA[*/(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.defer=true;j.async=true;j.src='//www.googletagmanager.com/gtm'+'.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KKSKW4');/*]]>*/</script> <!-- End Google Tag Manager --> <script defer async src="../apis.google.com/js/platform.js"></script> <div id="swifttagcontainerqxasrwnd66"><div id="proactivechatcontainerqxasrwnd66"></div><div id="swifttagdatacontainerqxasrwnd66"></div></div> <script defer type="text/javascript">var swiftscriptelemqxasrwnd66=document.createElement("script");swiftscriptelemqxasrwnd66.type="text/javascript";var swiftrandom=Math.floor(Math.random()*1001);var swiftuniqueid="qxasrwnd66";var swifttagurlqxasrwnd66="https://nmpro.kayako.com/visitor/index.php?/Default/LiveChat/HTML/SiteBadge/"+swiftrandom+":cHJvbXB0dHlwZT1jaGF0JnVuaXF1ZWlkPXF4YXNyd25kNjYmdmVyc2lvbj00LjcxLjImcHJvZHVjdD1mdXNpb24mc2l0ZWJhZGdlY29sb3I9d2hpdGUmYmFkZ2VsYW5ndWFnZT1lbiZiYWRnZXRleHQ9bGl2ZWhlbHAmb25saW5lY29sb3I9IzE5OGMxOSZvbmxpbmVjb2xvcmhvdmVyPSM1ZmFmNWYmb25saW5lY29sb3Jib3JkZXI9IzEyNjIxMiZvZmZsaW5lY29sb3I9I2EyYTRhYyZvZmZsaW5lY29sb3Job3Zlcj0jYmVjMGM1Jm9mZmxpbmVjb2xvcmJvcmRlcj0jNzE3Mzc4JmF3YXljb2xvcj0jNzM3YzRhJmF3YXljb2xvcmhvdmVyPSM5ZWE0ODEmYXdheWNvbG9yYm9yZGVyPSM1MTU3MzQmYmFja3Nob3J0bHljb2xvcj0jNzg4YTIzJmJhY2tzaG9ydGx5Y29sb3Job3Zlcj0jYTFhZTY2JmJhY2tzaG9ydGx5Y29sb3Jib3JkZXI9IzU0NjExOSZjdXN0b21vbmxpbmU9JmN1c3RvbW9mZmxpbmU9JmN1c3RvbWF3YXk9JmN1c3RvbWJhY2tzaG9ydGx5PQoyNmQ4ZWY0YzVjZjQ0YWFlNGIyYWQzOGZkOGM2Mjc5NDIzNzJhYWQ4";setTimeout("swiftscriptelemqxasrwnd66.src=swifttagurlqxasrwnd66;document.getElementById('swifttagcontainerqxasrwnd66').appendChild(swiftscriptelemqxasrwnd66);",1);</script> <script defer type="text/javascript">(function(e,a){var t,r=e.getElementsByTagName("head")[0],c=e.location.protocol;t=e.createElement("script");t.type="text/javascript";t.charset="utf-8";t.async=!0;t.defer=!0;t.src=c+"//front.optimonk.com/public/"+a+"/js/preload.js";r.appendChild(t);})(document,"14763");</script> <script type="application/ld+json">{"@context":"http://schema.org","@type":"LocalBusiness","name":"","@id":"","image":"https://d32zgchuaceooa.cloudfront.net/wp-content/uploads/2016/01/about.png","url":"","telephone":"+1-855-664-6776","address":{"@type":"PostalAddress","streetAddress":"800 E. 1st St N, Suite 310","addressLocality":"Wichita","addressRegion":"KS","postalCode":"67202","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":"37.6881762","longitude":"-97.3284914"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"}],"priceRange":"$$$"}</script> <script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"","url":"","logo":"https://d32zgchuaceooa.cloudfront.net/wp-content/themes/ikal/images/logo-publisher.png","contactPoint":[{"@type":"ContactPoint","telephone":"+1-855-664-6776","contactType":"customer service","areaServed":["US"],"contactOption":["TollFree"],"availableLanguage":["English, Spanish"],"email":""},{"@type":"ContactPoint","telephone":"+1-316-854-3304","contactType":"customer service","areaServed":["US"],"availableLanguage":["English, Spanish"],"email":""}],"sameAs":["https://www.facebook.com/NMPRO/","https://twitter.com/EricWorre","https://plus.google.com/118428496700808338090/","https://www.instagram.com/ericworre/","https://www.youtube.com/user/ericworre","https://www.linkedin.com/in/ericworre"]}</script> <script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","name":"","alternateName":"NMPro","url":"","potentialAction":[{"@type":"SearchAction","target":"","query-input":"required name=search_term_string"}]}</script> <div class='breadcrumb sr-only breadcrumbs'><p> You are here: <span id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><span ><a href="index.html" onclick="return false;" style="text-decoration:none" itemprop="url" rel="nofollow"><span itemprop="title"><strong>Home</strong></span></a></span></span></p></div> <script defer type="text/javascript">var _qevents=_qevents||[];(function(){var elem=document.createElement('script');elem.src=(document.location.protocol=="https:"?"https://secure":"http://edge")+".quantserve.com/quant.js";elem.defer=true;elem.async=true;elem.type="text/javascript";var scpt=document.getElementsByTagName('script')[0];scpt.parentNode.insertBefore(elem,scpt);})();_qevents.push({qacct:"p-RALqszdHWN0JY"});</script><noscript><div class="sr-only"><img src="../pixel.quantserve.com/pixel/p-RALqszdHWN0JY.gif" border="0" height="1" width="1" alt="Quantcast"/></div></noscript>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+window.__lc = window.__lc || {};
+window.__lc.license = 8661191;
+(function() {
+  var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+  lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+})();
+</script>
+<!-- End of LiveChat code -->
+
+</body>
+
+<script type="text/javascript">
+    document.getElementById('offer1').style.display='block';
+    document.getElementById('offer1_fade').style.display='block';
+    $('.videoheader').height('526px');
+    $('#subcancel').click(function(){
+        $('#popupWrapper').hide();
+    });
+    $('#subscribe-popup').click(function(){
+        $('#popupWrapper').hide();
+    });
+    // function Function1() {
+    //     document.getElementById("Dropdown1").classList.toggle("show");
+    //     $('#Dropdown2').removeClass('show');
+    //     $('#Dropdown3').removeClass('show');
+    // }
+    // function Function2() {
+    //     document.getElementById("Dropdown2").classList.toggle("show");
+    //     $('#Dropdown1').removeClass('show');
+    //     $('#Dropdown3').removeClass('show');
+    // }
+    // function Function3() {
+    //     document.getElementById("Dropdown3").classList.toggle("show");
+    //     $('#Dropdown2').removeClass('show');
+    //     $('#Dropdown1').removeClass('show');
+    // }
+    // window.onclick = function(event) {
+    //     if (!event.target.matches('.dropbtn')) {
+    //         var dropdowns = document.getElementsByClassName("dropdown-content");
+    //         var i;
+    //         for (i = 0; i < dropdowns.length; i++) {
+    //             var openDropdown = dropdowns[i];
+    //             if (openDropdown.classList.contains('show')) {
+    //                 openDropdown.classList.remove('show');
+    //             }
+    //         }
+    //     }
+    // }
+</script>
+
+</html>
